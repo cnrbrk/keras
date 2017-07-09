@@ -8,8 +8,6 @@ from PIL import Image
 from keras.preprocessing import image
 from keras.utils import to_categorical
 
-
-directory = '/home/conor/tensorflow/Experiments/classification/Keras_Retraining/Multiclass_Retraining/'
 # images.
 img_width, img_height = 150, 150
 train_data_dir = 'flowers/train'
@@ -104,5 +102,5 @@ def predict_image_class(test_image):
 
 # save_bottlebeck_features()
 # model = train_top_model()
-test_image = 'data_flowers/test/daisy/daisy_601.jpg'
+test_image = 'flowers/test/daisy/daisy_601.jpg'
 predict_image_class(test_image)
