@@ -1,3 +1,34 @@
+"""
+Multiclass classifier for flower dataset.
+Based on: https://gist.github.com/fchollet/f35fbc80e066a49d65f1688a7e99f069#file-classifier_from_little_data_script_2-py
+Directory structure for training and validation data as follows.
+data/
+   train/
+       daisy/
+           daisy_001.jpg
+           daisy_002.jpg
+           ...
+       dandelion/
+           dandelion_001.jpg
+           dandelion_002.jpg
+           ...
+       roses/
+           roses_001.jpg
+           roses_002.jpg
+           ...
+       sunflowers/
+           sunflowers_001.jpg
+           sunflowers_002.jpg
+           ...
+       tulips/
+           tulips_001.jpg
+           tulips_002.jpg
+           ...
+   validation/
+	# similar
+
+"""
+
 import numpy as np
 from keras.preprocessing.image import ImageDataGenerator
 from keras.models import Sequential, Model
@@ -8,7 +39,7 @@ from PIL import Image
 from keras.preprocessing import image
 from keras.utils import to_categorical
 
-# images.
+# images
 img_width, img_height = 150, 150
 train_data_dir = 'flowers/train'
 validation_data_dir = 'flowers/validation'
